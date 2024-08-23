@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Texto Completo</title>
+    <style>
+        /* Opcional: estilos básicos para la visibilidad */
+        #textoOculto {
+            display: none; /* Ocultar el texto inicialmente */
+            margin-top: 10px;
+        }
+        #enlace {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mostrar Texto Completo</h1>
+    <a id="enlace">Mostrar más...</a>
+    <div id="textoOculto">
+        <p>Este es el contenido completo que estaba oculto. Aquí puedes poner el texto largo o cualquier contenido adicional que desees mostrar.</p>
+    </div>
+
+    <script>
+        // Obtener referencias al enlace y al contenido oculto
+        const enlace = document.getElementById('enlace');
+        const textoOculto = document.getElementById('textoOculto');
+
+        // Manejar el evento de clic del enlace
+        enlace.addEventListener('click', function() {
+            // Mostrar el contenido oculto
+            textoOculto.style.display = 'block';
+            
+            // Ocultar el enlace
+            enlace.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
